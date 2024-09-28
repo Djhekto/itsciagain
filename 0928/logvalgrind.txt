@@ -1,0 +1,47 @@
+valgrind --leak-check=full -s --track-origins=yes ./prog
+==1999== Memcheck, a memory error detector
+==1999== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==1999== Using Valgrind-3.19.0 and LibVEX; rerun with -h for copyright info
+==1999== Command: ./prog
+==1999== 
+12
+1
+0
+0
+0
+1
+2
+0
+0
+1
+2
+3
+0
+1
+2
+3
+4
+1 0 0 0 
+1 2 0 0 
+1 2 3 0 
+1 2 3 4 
+line 0 max is 0
+line 1 max is 2
+line 2 max is 3
+line 3 max is 4
+column 0 max is 1
+column 1 max is 2
+column 2 max is 3
+column 3 max is 4
+ne verhne treug
+nizne treug
+main line sum 10
+ sidemain line sum 3
+ ==1999== 
+==1999== HEAP SUMMARY:
+==1999==     in use at exit: 0 bytes in 0 blocks
+==1999==   total heap usage: 7 allocs, 7 frees, 2,144 bytes allocated
+==1999== 
+==1999== All heap blocks were freed -- no leaks are possible
+==1999== 
+==1999== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
