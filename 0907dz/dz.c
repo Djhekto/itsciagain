@@ -130,8 +130,8 @@ void task3(int* mas_int, int dlin){
 	printf("\nmassiv do sort\n");
 	for (int i = 0; i<dlin; i++){ printf("%d ", mas_int[i]);}
 
-	int inx_mx = -1;
-	int c = -1;
+	int inx_mx;
+	int c;
 	for (int i = 0; i < dlin - 1; i++) {
 		inx_mx = i;
 		for (int j = i + 1; j < dlin; j++) {
